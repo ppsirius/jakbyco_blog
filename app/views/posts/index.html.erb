@@ -5,6 +5,11 @@
       <div class='date'><%= post.created_at.strftime("%d.%m.%Y") %></div>
       <div class='description'><%= post.description %></div>
       <div class='code'><%= post.code %></div>
+      <div class='post_options'>
+        <%= link_to 'Show', post %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
   <% end %>
 
