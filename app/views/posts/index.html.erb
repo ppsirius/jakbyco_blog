@@ -3,7 +3,7 @@
       <h2><%= post.title %></h2>
       <div class='date'><%= post.created_at.strftime("%d.%m.%Y") %></div>
       <div class='line'></div>
-      <div class='description'><%= post.description %></div>
+      <div class='description'><%= auto_link(post.description) %></div>
       <%= content_tag :pre, post.code if post.code? %>
       <div class='post_options'>
         <%= link_to 'Show', post %>
