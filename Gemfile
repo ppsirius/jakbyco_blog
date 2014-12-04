@@ -45,6 +45,7 @@ gem 'pg', group: :production
 group :development do
   gem "better_errors"
 end
+gem 'rails_12factor', group: :production
 
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'rails_autolink'
