@@ -44,4 +44,3 @@ end
 
 gem 'acts-as-taggable-on', '~> 3.4'
 
-gem "twitter-bootstrap-rails"
