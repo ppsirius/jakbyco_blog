@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   before_create :publish
 
   acts_as_taggable
+  acts_as_taggable_on :tags
 
   scope :published_posts, -> { where(published: true) }
   scope :desc, -> { order(created_at: :desc) }
