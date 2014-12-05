@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.published_posts.desc
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   # GET /posts/1

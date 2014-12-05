@@ -16,6 +16,15 @@ body {
   background-color: $baseBgColor;
 }
 
+a {
+  color: #899d1c;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: #627012;
+  }
+}
+
 .header {
   background-color: $green;
   padding: 20px 0;
@@ -61,11 +70,13 @@ h2 {
   margin-bottom: 15px;
 }
 
-a {
-  color: #899d1c;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-    color: #627012;
-  }
+.about_photo {
+  margin: 0 auto;
+  width: 94px;
+}
+
+.about_links {
+  margin-top: 16px;
+  margin-left: 30%;
+  line-height: 1.8;
 }
