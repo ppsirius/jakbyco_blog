@@ -35,6 +35,7 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'rails_autolink'
 gem "font-awesome-rails"
