@@ -5,11 +5,13 @@
       <div class='line'></div>
       <div class='description'><%= auto_link(post.description) %></div>
       <%= content_tag :pre, post.code if post.code? %>
-      <div class='post_options pull-right'>
-        <%= link_to 'Show', post %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+      <% if user_signed_in? %>
+        <div class='post_options pull-right'>
+          <%= link_to 'Show', post %>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 

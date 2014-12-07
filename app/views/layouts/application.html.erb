@@ -9,13 +9,24 @@
 </head>
 <body>
   <div class="header">
-    <div class="container"><%= link_to '<jakby_co_blog>', root_path %></div>
+    <div class="container">
+      <div class="logo col-md-10"><%= link_to '<jakby_co_blog>', root_path %></div>
+      <div class="login col-md-2">
+        <% if user_signed_in? %>
+          <%= link_to 'Edit profile', edit_user_registration_path %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> |
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row">      
+      <div class="notice"><%= notice %></div>
+      <div class="alert"><%= alert %></div>
       <div class="col-md-8">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
       <div class="col-md-4">
@@ -25,10 +36,10 @@
             <%= image_tag("my_photo.png", :alt => "My photo") %>
           </div>
           <div class="about_links">
-            <a href="mailto:piotrek@jakbyco.com">piotrek@jakbyco.com</a><br>
-            <a href="https://github.com/ppsirius">github.com/ppsirius</a><br>
-            <a href="https://twitter.com/ppsirius">@ppsirius</a><br>
-            <a href="http://pl.linkedin.com/pub/piotr-pupczyk/91/82/365/">LinkedIn</a><br>
+            <i class="fa fa-comment"></i><a href="mailto:piotrek@jakbyco.com">piotrek@jakbyco.com</a><br>
+            <i class="fa fa-github"></i><a href="https://github.com/ppsirius">github.com/ppsirius</a><br>
+            <i class="fa fa-twitter"></i><a href="https://twitter.com/ppsirius">@ppsirius</a><br>
+            <i class="fa fa-linkedin"></i><a href="http://pl.linkedin.com/pub/piotr-pupczyk/91/82/365/">LinkedIn</a><br>
           </div>
         </div>
         <div class='post'>

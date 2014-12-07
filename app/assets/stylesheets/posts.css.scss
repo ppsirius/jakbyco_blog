@@ -39,6 +39,11 @@ a {
       text-decoration: none;
     }
   }
+  .login {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 3%;
+  }
 }
 
 h2 {
@@ -95,4 +100,9 @@ h2 {
   font-weight: 100;
   padding-left: 16px;
   line-height: 1.4;
+}
+
+i {
+  color: $green;
+  margin-right: 14px;
 }
