@@ -35,6 +35,9 @@
               <%= link_to tag.name, tag_path(tag.name), class: css_class %>
             <% end %>
         </div>
+        <%= link_to new_post_path do %>
+          <div class="add">+</div>
+        <% end %>
       </div>
     </div>
   </div>

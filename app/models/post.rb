@@ -11,5 +11,4 @@ class Post < ActiveRecord::Base
     self.published = true
   end
 
-
 end
