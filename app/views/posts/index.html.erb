@@ -10,12 +10,13 @@
         <%= link_to 'Edit', edit_post_path(post) %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
-        <% @tags.each do |tag| %>
-          <%= link_to tag.name, tagged_url(:tag => tag.name) %>
-        <% end %>
+
     </div>
   <% end %>
 
 <br>
+
+
+
 
 <%= link_to 'New Post', new_post_path %>
